@@ -1,0 +1,40 @@
+h1{
+  color: black;
+}
+div{
+  padding: 2vw;
+}
+div h2{
+  color: black;
+}
+.imgMQuerie{
+  width: 60vw;
+}
+
+@media screen and (max-width: 600px ){
+  .sectPrincipal { 
+    background-color: black; 
+    color: white;
+  }
+  .sectPrincipal h2 { 
+    color: aliceblue; 
+    line-height: 7vw;
+  }
+  .asideText{ 
+    color: blueviolet; 
+    font-size: 10px;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px){
+  .sectPrincipal { 
+    background-color: grey; 
+    color: rgb(68, 222, 222);
+  }
+  .sectPrincipal h2 { 
+    color: rgb(12, 80, 139);
+  }
+  .asideText { 
+    color: rgb(64, 19, 106);
+  }
+}

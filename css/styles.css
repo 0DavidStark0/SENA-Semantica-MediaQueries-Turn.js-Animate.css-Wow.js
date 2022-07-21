@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam&display=swap');
+*{
+  box-sizing: border-box;
+}
+body{
+  padding: 0;
+  margin: 0;
+}
+
+li{
+  list-style: none;
+  width: auto;
+}
+
+.rosa{
+  /* color: rgb(146, 9, 105); */
+  color:  rgb(192, 110, 2);
+  text-align: center;
+}
+.nav1{
+  /* background-color: rgb(68, 54, 158); */
+  /* background: linear-gradient(90deg,rgb(62, 8, 113), rgb(23, 20, 44)); */
+  background: white;
+  border: 2px solid black;
+}
+.ul-nav1{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.buttom{
+  /* background-color: slateblue; */
+  /* border: solid 2px black; */
+  border-radius:5px ;
+  font-family: 'Kalam', cursive;
+  font-size: 20px;
+  padding: 0 5px;
+  color: rgb(0, 0, 0);
+}
+.buttom:hover{
+  background: linear-gradient(90deg, rgba(253,156,29,1) 50%, rgba(252,192,69,1) 100%);
+  cursor: pointer;
+  color: rgb(26, 3, 52);
+}
+
+.centrar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+hgroup{
+  background-image: url(../images/headerSemantica2.jpg);
+  height: 400px;
+  background-size: cover;
+  border-bottom: 2px solid black;
+  text-shadow: 10px 10px 10px  rgba(253,156,29,1);
+}
+@media (max-width: 600px) {
+  hgroup{
+    line-height: 6vw;
+    height: 300px;
+  }
+}
+
+.nav-left{
+  /* background-color: rgb(23, 20, 44); */
+  /* background: linear-gradient(90deg, rgb(23, 20, 44), rgb(56, 6, 103)); */
+  background: linear-gradient(90deg, rgba(253,156,29,1) 50%, rgba(252,192,69,1) 100%);
+  border-right: 2px solid black;
+}
+.ul-left{
+  line-height: 80px;
+  font-family: 'Kalam', cursive;
+  font-size: 18px;
+  padding: auto;
+}
+.ul-left a{
+  color: black;
+}
+.ul-left a:hover{
+  color: white;
+  font-size: 19px;
+}
+
+.headSection{
+  margin: 2vw 2vw;
+  line-height: 7vw;
+  text-align: center;
+}
+
+.img-article{
+  /* width: 200px; */
+  width: 20vw;
+}
+
+.footerPrincipal{
+  /* background-color: rgb(23, 20, 44); */
+  background: linear-gradient(320deg, rgb(23, 20, 44), rgb(32, 10, 52));
+  border: 2px solid black;
+}
+.ul-footer{
+  display: flex;
+  justify-content: space-evenly;
+  justify-self: center;
+}
+.aFooter:hover{
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.borde1{
+  border: 3px solid black;
+  border-bottom: 0ch;
+}
+.red{
+  color: red;
+}
+
+.center{
+  text-align: center;
+}
+
+.asideText{
+  font-size: 1rem;
+}

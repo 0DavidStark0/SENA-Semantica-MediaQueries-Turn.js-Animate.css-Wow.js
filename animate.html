@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <title>Animaciones</title>
+</head>
+<body>
+  <header class="row">
+    <nav class="nav1 col-xs-12">
+      <ul class="ul-nav1">
+        <li class="li-nav1">
+          <a href="index.html" class="buttom">Punto1</a>
+        </li>
+        <li class="li-nav1">
+          <a href="mediaQueries.html" class="buttom">Punto2</a>
+        </li>
+        <li class="li-nav1">
+          <a href="turn.js.html" class="buttom">Punto3</a>
+        </li>
+        <li class="li-nav1">
+          <a href="animate.html" class="buttom">Punto4</a>
+        </li>
+      </ul>
+    </nav>
+    <hgroup class="centrar col-xs-12">
+      <section>
+        <h1 class="rosa">Bienvenido a la definicion de</h1>
+        <h2 class="rosa">Animaciones y Animate.css</h2>
+      </section>
+    </hgroup>
+  </header>
+
+  <section class="row">
+    <section class="col-xs-1 col-md-2"></section>
+    <section class="col-xs-10 col-md-8">
+      <header class="headSection"><H2>Animaciones en CSS</H2></header>
+      <div>
+        <h4>Descripcion</h4>
+        <p>Una animación permite que un elemento cambie gradualmente de un estilo a otro.
+          Puede cambiar tantas propiedades CSS como desee, tantas veces como desee.
+          Para usar la animación CSS, primero debe especificar algunos fotogramas clave para la animación.
+          Los fotogramas clave contienen los estilos que tendrá el elemento en determinados momentos.</p>
+      </div>
+      <div>
+        <h4>@Keyframes</h4>
+        <p>Cuando especifica estilos CSS dentro de la @keyframes regla, la animación cambiará gradualmente del estilo actual al nuevo estilo en ciertos momentos.
+        Para que una animación funcione, debe vincular la animación a un elemento.</p>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <p><b>Retrasar una animacion:</b> La propiedad <b>animation-delay</b> especifica un retraso para el inicio de una animación.</p>
+          </li>
+          <li>
+            <p><b>Establece cuantas veces debe ejecutarse la animacion:</b> La propiedad <b>animation-iteration-count</b> especifica el número de veces que debe ejecutarse una animación.</p>
+          </li>
+          <li>
+            <p><b>Ejecutar animación en dirección inversa o ciclos alternativos:</b> La propiedad <b>animation-direction</b> especifica si una animación debe reproducirse hacia adelante, hacia atrás o en ciclos alternos. <br>
+            La propiedad animation-direction puede tener los siguientes valores:</p>
+            <ol>
+              <li><b>normal</b>- La animación se reproduce normalmente (hacia adelante). esto es por defecto</li>
+              <li><b>reverse</b>- La animación se reproduce en dirección inversa (hacia atrás)</li>
+              <li><b>alternate</b>- La animación se reproduce primero hacia delante y luego hacia atrás.</li>
+              <li><b>alternate-reverse</b>- La animación se reproduce primero hacia atrás y luego hacia adelante.</li>
+            </ol>
+          </li>
+          <li>
+            <p><b>Especificar la curva de velocidad de la animación:</b>La animation-timing-functionpropiedad especifica la curva de velocidad de la animación. <br>La propiedad animation-timing-function puede tener los siguientes valores:</p>
+            <ol>
+              <li><b>ease</b>- Especifica una animación con un inicio lento, luego rápido, luego termina lentamente (esto es predeterminado)</li>
+              <li><b>linear</b>- Especifica una animación con la misma velocidad de principio a fin</li>
+              <li><b>ease-in</b>- Especifica una animación con un comienzo lento</li>
+              <li><b>ease-out</b>- Especifica una animación con un final lento</li>
+              <li><b>ease-in-out</b>- Especifica una animación con un comienzo y un final lentos</li>
+              <li><b>cubic-bezier(n,n,n,n)</b>- Le permite definir sus propios valores en una función cubic-bezier</li>
+            </ol>
+          </li>
+          <li>
+            <p><b>Especificar el modo de relleno para una animación:</b>Las animaciones CSS no afectan a un elemento antes de que se reproduzca el primer fotograma clave o después de que se reproduzca el último fotograma clave. La propiedad animation-fill-mode puede anular este comportamiento. <br>
+            nimation-fill-modepropiedad especifica un estilo para el elemento de destino cuando la animación no se está reproduciendo (antes de que comience, después de que finalice o ambos). <br>
+            ropiedad animation-fill-mode puede tener los siguientes valores:</p>
+            <ol>
+              <li><b>none</b>- Valor por defecto. La animación no aplicará ningún estilo al elemento antes o después de que se ejecute</li>
+              <li><b>forwards</b>- El elemento conservará los valores de estilo establecidos por el último fotograma clave (depende de la dirección de la animación y el número de iteraciones de la animación)</li>
+              <li><b>backwards</b>- El elemento obtendrá los valores de estilo establecidos por el primer fotograma clave (depende de la dirección de la animación) y los conservará durante el período de retraso de la animación.</li>
+              <li><b>both</b>- La animación seguirá las reglas tanto para adelante como para atrás, extendiendo las propiedades de animación en ambas direcciones</li>
+            </ol>
+          </li>
+        </ul>
+      </div>
+      <div class="divAnimate">
+        <h4><b>Ejemplo:</b></h4>
+        <div class="div_imgAnimate">
+          <img class="imgAnimate" src="images/LogoCompuPrinterHD (1).png" alt="">
+        </div>
+      </div>
+      <header class="headSection"><H2>Animate.css</H2></header>
+      <div>
+        <h4>Descripcion</h4>
+        <p>Es una libreria de animaciones que se utiliza para darle movimiento a los objetos dentro de nuestros sitios web, esto nos permite darle mas vida a nuestras paginas web y que los usuarios de estas las vean mucho mas atractivas. Ideal para énfasis, páginas de inicio, controles deslizantes y sugerencias de guía de atención.</p>
+      </div>
+      <div class="ejAnimate">
+        <h2  class="ej1 animate__animated animate__bounce">Ejemplo de ANIMATE.CSS</h2> <br>
+        <h2  class="ej2 animate__animated animate__tada">Ejemplo de ANIMATE.CSS</h2>
+        <h5 class="alerta">Actualiza la pagina para ver la animacion</h5>
+      </div>
+      <header class="headSection"><H2>Wow.js</H2></header>
+      <div>
+        <h4>Descripcion</h4>
+        <p>Wow.js es una libreria de JavaScript que se complementa con la libreria de Animate.css. Esta libreria de JavaScript hace que las animaciones no se activen hasta que el usuario de un sitio web las vea a medida que hace scroll en la pagina. Es decir que las animaciones se retrazan hasta que el usuario tenga a la vista el objeto que se encuentra animado.</p>
+      </div>
+      <div class="ejAnimate">
+        <h2 class="ej2 wow animate__animated animate__bounceInUp">Ejemplo de Wow.js</h2> <br>
+        <h2 class="ej1 wow animate__animated animate__swing">Ejemplo de Wow.js</h2>
+        <h5 class="alerta">Actualiza la pagina para ver la animacion y si quieres has scroll hacia arriba, actualiza y vuelve a hacer scroll hacia abajo para ver la animacion correctamente.</h5>
+      </div>
+    </section>
+    <section class="col-xs-1 col-md-2"></section>
+  </section>
+
+
+  <script src="js/wow.min.js"></script>
+  <script> new WOW().init(); </script>
+</body>
+<footer class="footerPrincipal row">
+  
+  <div class="col-xs-12">
+    <ul class="ul-footer">
+      <li class="liFooter"><a class="aFooter" href="">Facebook</a></li>
+      <li class="liFooter"><a class="aFooter" href="">Instagram</a></li>
+      <li class="liFooter"><a class="aFooter" href="">Twitter</a></li>
+      <li class="liFooter"><a class="aFooter" href="">linkedIn</a></li>
+    </ul>
+  </div>
+</footer>
+</html>

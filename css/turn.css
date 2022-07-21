@@ -1,0 +1,12 @@
+.headSection{
+  text-align: center;
+}
+div{
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+  .imgTurnjs{
+    width: 80vw;
+  }
+}

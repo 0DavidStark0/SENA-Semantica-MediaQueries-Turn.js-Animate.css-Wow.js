@@ -1,0 +1,35 @@
+.divAnimate{
+  padding-bottom: 70px;
+  text-align: center;
+}
+.div_imgAnimate{
+  width: 100%;
+}
+.imgAnimate{
+  max-width: 20vw;
+  max-height: 20vw;
+  animation-name: logoAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;;
+}
+
+@keyframes logoAnimation{
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(-360deg);}
+}
+
+.ejAnimate{
+  width: 100%;
+  text-align: center;
+  padding: 100px 0px 60px;
+}
+.alerta{
+  color: red;
+}
+.ej1{
+  color: blueviolet;
+}
+.ej2{
+  color: chartreuse;
+}

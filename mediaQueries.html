@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/index.min.css">
+  <link rel="stylesheet" href="css/mdStyles.css">
+  <title>Media Queries</title>
+</head>
+<body>
+  <header class="row">
+    <nav class="nav1 col-xs-12">
+      <ul class="ul-nav1">
+        <li class="li-nav1">
+          <a href="index.html" class="buttom">Punto1</a>
+        </li>
+        <li class="li-nav1">
+          <a href="mediaQueries.html" class="buttom">Punto2</a>
+        </li>
+        <li class="li-nav1">
+          <a href="turn.js.html" class="buttom">Punto3</a>
+        </li>
+        <li class="li-nav1">
+          <a class="buttom">Punto4</a>
+        </li>
+      </ul>
+    </nav>
+    <hgroup class="centrar col-xs-12">
+      <section>
+        <h1 class="rosa">Bienvenido a la definicion de</h1>
+        <h2 class="rosa">Media Queries</h2>
+      </section>
+    </hgroup>
+  </header>
+
+  <section class="row">
+    <nav class="col-xs-3 col-md-2 nav-left">
+      <ul class="ul-left">
+        <li><a href="#definicion">Definicion</a></li>
+        <li><a href="#MediaTypes">Media Types</a></li>
+        <li><a href="#OpLogicos">Operadores Logicos</a></li>
+        <li><a href="#FunMultimedia">Funciones Multimedia</a></li>
+      </ul>
+    </nav>
+    <section class="sectPrincipal col-xs-9 col-md-10">
+      <header class="headSection"><H1>CSS Media Queries</H1></header>
+      <div class="col-xs-12">
+        <h2 id="definicion">Definicion</h2>
+        <p>Las <b>media queries</b> son útiles cuando deseas modificar tu página web o aplicación en función del tipo de dispositivo (como una impresora o una pantalla) o de características y parámetros específicos (como la resolución de la pantalla o el ancho del viewport del navegador).</p>
+        <p>Las <b>media queries</b> consisten de un tipo de medio opcional y una o más expresiones de características de medios. Varias consultas se pueden combinar utilizando operadores lógicos. No distinguen entre mayúsculas y minúsculas.</p>
+      </div>
+      <div class="col-xs-12">
+        <h2 id="MediaTypes">Media Types</h2>
+        <p>Los <b>Media Types</b>  describen la categoría general de un dispositivo. Excepto cuando se utilizan los operadores lógicos <b>not</b> o <b>only</b>, el tipo de medio es opcional y será interpretada como <b>all.</b></p>
+
+        <ul>
+          <li>
+            <h3>all</h3>
+            <p>Apto para todos los dispositivos</p>
+          </li>
+          <li>
+            <h3>print</h3>
+            <p>Destinado a material impreso y visualización de documentos en una pantalla en el modo de vista previa de impresión. </p>
+          </li>
+          <li>
+            <h3>screen</h3>
+            <p>Destinado principalmente a las pantallas.</p>
+          </li>
+          <li>
+            <h3>speech</h3>
+            <p>Destinado a sintetizadores de voz.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12">
+        <h2 id="OpLogicos">Operadores Logicos</h2>
+        <p>Se pueden redactar queries utilizando <b>operadores lógicos</b>, incluyendo <b>not, and,</b>  y <b>only.</b></p>
+        <p>Además se puede combinar múltiples <b>queries</b> en una lista separada por comas múltiples; si cualquiera de las <b>queries</b> en la lista es verdadera, la hoja de estilo asociada es aplicada. Esto es equivalente a una operación lógica <b>"or".</b></p>
+
+        <div>
+          <h3>and</h3>
+          <p>El operador <b>and</b> es usado para colocar juntas múltiples funciones multimedia.</p>
+          <p>Si usted quiere utilizar mas de una <b>media queri</b> puede utilizar el operador logico <b>and</b> en medio de las dos <b>media queries</b> de la siguiente forma:</p>
+
+          <span>@media (min-width: 700px) and (orientation: landscape) { ... }</span>
+
+          <p>La anterior query solo retornara verdadero si la ventana tiene un ancho de 700px o mas y la pantalla esta en formato horizontal.</p>
+        </div>
+        <div>
+          <h3>or o listas separadas por comas</h3>
+          <p>Las listas separadas por comas se comportan como el operador or cuando es usado en media queries. Cuando utilice una lista separada por comas y alguno de los queries retorna verdadero, el estilo o la hoja de estilos sera aplicada. Cada query en una lista separada por comas es tratado como una query individual y cualquier operador aplicado a un medio no afectara a los demás. Esto significa que cada query en una lista separada por comas puede tener como objetivo diferentes medios, tipos y estados.</p>
+          <p>Un ejemplo de esto es:</p>
+
+          <span>@media (min-width: 700px), handheld and (orientation: landscape) { ... }</span>
+
+          <p>En este ejemplo se aplicarian estilos a un dispositivo con un ancho minimo de 700px o si el dispositivo esta colocado de forma horizontal</p>
+        </div>
+        <div>
+          <h3>not</h3>
+          <p>El operador <b>not</b> aplica a todo el query.Un <b>not</b> negara un query si es posible pero no a todos los query posibles si están ubicados en una lista separada por comas. El operador <b>not</b> no puede ser usado para negar un query individual, solo para un query completo.</p>
+
+          <span>@media not (all and (monochrome)) { ... }</span>
+        </div>
+        <div>
+          <h3>only</h3>
+          <p>El operador <b>only</b> previene que navegadores antiguos que no soportan queries con funciones apliquen los estilos asignados.</p>
+        </div>
+        <div class="col-xs-12">
+          <h2 id="FunMultimedia">Funciones multimedia</h2>
+          <p>La mayoría de las funciones multimedia pueden ser precedidas por "min-" o "max-" para expresar "greater or equal to" o "less than or equal to". Esto elimina la necesidad de usar los símbolos "<" y ">" los cuales podrían causar conflictos con HTML y XML.</p>
+
+          <div>
+            <h3>color</h3>
+            <p>Indica el numero de bits por componente de color del dispositivo de salida. Si el dispositivo no soporta colores, este valor es 0.</p>
+            <p><b>Ejemplo:</b>Para aplicar una hoja de estilo a todos los dispositivos que soporten colores:</p>
+            <span>@media all and (color) { ... }</span>
+            <h3>color-index</h3>
+            <p>Indica el numero de entradas en la tabla de colores para el dispositivo de salida.</p>
+            <p><b>Ejemplo:</b>Para indicar que una hoja de estilo debe aplicarse a todos los dispositivos utilizando índices de color, usted puede hacer esto:</p>
+            <span>@media all and (color-index) { ... }</span>
+          </div>
+          <div>
+            <h3>aspect-ratio</h3>
+            <p>Describe el aspecto de una zona a mostrar en el dispositivo de salida. Este valor consiste en enteros positivos separados por una barra ("/"). Esto representa la razón de aspecto de los pixeles horizontales (primer termino) a los pixeles verticales (segundo termino).</p>
+            <p><b>Ejemplo:</b>Lo siguiente selecciona una hoja de estilo especial para ser aplicada donde la proporción del tamaño de la pantalla del dispositivo de salida es al menos la misma de ancho que de alto.</p>
+            <span>@media screen and (min-aspect-ratio: 1/1) { ... }</span>
+            <h3>device-aspect-ratio</h3>
+            <p>Describe la proporción de aspecto del dispositivo de salida. Este valor consiste de dos enteros positivos separados por una barra ("/"). Este representa la proporción de aspecto de los pixeles horizontales (primer termino) a los pixeles verticales (segundo termino).</p>
+            <p><b>Ejemplo:</b>El siguiente código selecciona una hoja de estilo especial para ser aplicada en pantallas panorámicas ("widescreen").</p>
+
+            <span>@media screen and (device-aspect-ratio: 16/9), screen and (device-aspect-ratio: 16/10) { ... }</span>
+          </div>
+          <div>
+            <h3>device-height</h3>
+            <p>Describe la altura del dispositivo de salida (ya sea la totalidad de la pantalla o página y no el área del documento a renderizar).</p>
+          </div>
+          <div>
+            <h3>device-width</h3>
+            <p>Describe la anchura del dispositivo de salida (ya sea la totalidad de la pantalla o página y no el área del documento a renderizar).</p>
+            <p><b>Ejemplo:</b>Para aplicar una hoja de estilo a un documento cuando este sea mostrado en una pantalla de menos de 800px de ancho, usted puede usar esto:</p>
+            <span> 
+              <link rel="stylesheet" media="screen and (max-device-width: 799px)" />
+            </span>
+          </div>
+          <div>
+            <h3>grid</h3>
+            <p>Determina cuando el dispositivo de salida es un dispositivo de cuadrícula o de mapa de bits. Si el dispositivo esta basado en una cuadrícula (como una terminal TTY o una pantalla de teléfono de solo texto), el valor sera 1, de lo contrario sera 0.</p>
+            <p><b>Ejemplo:</b>Para aplicar una hoja de estilo a un dispositivo portátil con una pantalla de 15 caracteres o mas estrecha:</p>
+
+            <span>@media handheld and (grid) and (max-width: 15em) { ... }</span>
+          </div>
+          <div>
+            <h3>height</h3>
+            <p>La función height describe la altura de la superficie a renderizar en el dispositivo de salida (como la altura de una ventana o la bandeja de papel en una impresora).</p>
+          </div>
+          <div>
+            <h3>monochrome</h3>
+            <p>Indica el número de bits por pixel en un dispositivo monocromático (escala de grises). Si el dispositivo no es monocromático el valor sera 0.</p>
+            <p><b>Ejemplo:</b>Para aplicar una hoja de estilo a todos los dispositivos monocromáticos:</p>
+
+            <span>@media all and (monochrome) { ... }</span>
+          </div>
+          <div>
+            <h3>orientation</h3>
+            <p>Indica cuando el dispositivo esta en modo landscape (el ancho de la pantalla es mayor al alto) o modo portrait (el alto de la pantalla es mayor al ancho).</p>
+            <p><b>Ejemplo:</b>Para aplicar una hoja de estilo solo en orientación vertical (portrait):</p>
+
+            <span>@media all and (orientation: portrait) { ... }</span>
+          </div>
+          <div>
+            <h3>resolution</h3>
+            <p>Indica la resolución (densidad de pixeles) del dispositivo de salida. La resolución puede ser especificada en puntos por pulgada (dpi) o en puntos por centímetros (dpcm).</p>
+            <p><b>Ejemplo:</b>Para aplicar una hoja de estilo a dispositivos con al menos 300 dpi de resolución:</p>
+
+            <span>@media print and (min-resolution: 300dpi) { ... }</span>
+          </div>
+          <div>
+            <h3>scan</h3>
+            <p>Describe el proceso de exploración de televisión de los dispositivos de salida.</p>
+            <p><b>Ejemplo:</b>Para aplicar una hoja de estilo solo a televisores de exploración progresiva:</p>
+
+            <span>@media tv and (scan: progressive) { ... }</span>
+          </div>
+          <div>
+            <h3>width</h3>
+            <p>La función width describe el ancho de la superficie a renderizar en el dispositivo de salida (como el ancho de una ventana de un documento o el ancho de la bandeja de papel en una impresora).</p>
+            <p><b>Ejemplo:</b>Si usted quiere especificar una hoja de estilo para dispositivos portátiles o pantallas con un ancho de al menos 20em, usted puede usar esta query:</p>
+
+            <span>@media handheld and (min-width: 20em), screen and (min-width: 20em) { ... }</span>
+          </div>
+        </div>
+        <div class="Ejemplos">
+          <h4>Ejemplos:</h4>
+          <div>
+            <p><b>Ejemplo 1:</b> En el siguiente ejemplo se crea un media querie que se aplica a esta pagina solo a las pantallas que tengan un maximo de ancho de 600px</p>
+            <img class="imgMQuerie" src="images/codeMedia600px.png" alt="">
+            <p>En este ejemplo cuando la pantalla no supera un ancho maximo de 600px se le aplica:</p>
+            Un fondo negro y un color de letra blanco a la <b>section</b> principal. <br>
+            Un color de letra aliceblue y un alto de linea de 7vw a los <b>h2</b> de la <b>section</b> principal <br>
+            Un color de letra blueviolet y un tamaño de letra de 10px</p>
+            <h5>Prueba a disminuir el ancho de la pantalla para ver los resultados</h5>
+          </div>
+          <div>
+            <p><b>Ejemplo 2:</b> En el siguiente ejemplo se crea un media querie que se aplica a esta pagina solo a las pantallas que tengan un maximo de ancho de 900px y un minimo de ancho de 601px</p>
+            <img class="imgMQuerie" src="images/codeMedia900px.png" alt="">
+            <p>En este ejemplo cuando la pantalla no supera un ancho maximo de 600px se le aplica:</p>
+            <p>Un fondo gris y un color de letra  rgb(68, 222, 222) a la <b>section</b> principal. <br>
+            Un color de letra rgb(12, 80, 139) a los <b>h2</b> de la <b>section</b> principal <br>
+            Un color de letra  rgb(64, 19, 106)</p>
+            <h5>Prueba a disminuir el ancho de la pantalla para ver los resultados</h5>
+          </div>
+        </div>
+      </div>
+      <section class="col-xs-12">
+        <aside>
+          <ul>
+            <h4>Tambien puedes visitar:</h4>
+            <li><a class="asideText" href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp">www.w3schools.com/css/css_rwd_mediaqueries.asp</a></li>
+            <li><a class="asideText" href="https://desarrolloweb.com/articulos/css-media-queries.html">desarrolloweb.com/articulos/css-media-queries.html</a></li>
+            <li><a class="asideText" href="https://lenguajecss.com/css/responsive-web-design/media-queries/">lenguajecss.com/css/responsive-web-design/media-queries/</a></li>
+          </ul>
+        </aside>
+
+      </section>
+      <section class="col-xs-12">
+        <section class="row">
+          <article class="col-xs-4">
+            <header><h4>Guia prototipos</h4></header>
+            <a href="https://0davidstark0.github.io/SENA-guiaMaquetacionPrototipos/" target="_blank"><img class="img-article" src="images/GuiaMaqPrototipos.png" alt=""></a>
+            <p>Solucion guia maquetacion prototipos</p>
+          </article>
+          <article class="col-xs-4">
+            <header><h4>Pseudo Elementos</h4></header>
+            <a href="https://0davidstark0.github.io/SENA-pseudoElementos-/" target="_blank"><img class="img-article" src="images/PseudoElementos.png" alt=""></a>
+            <p>Solucion guia maquetacion prototipos</p>
+          </article>
+          <article class="col-xs-4">
+            <header><h4>Pseudo Clases</h4></header>
+            <a href="https://0davidstark0.github.io/SENA-pseudoClases/" target="_blank"><img class="img-article" src="images/PseudoClases.png" alt=""></a>
+            <p>Solucion guia maquetacion prototipos</p>
+          </article>
+        </section>
+      </section>
+      
+    </section>
+  </section>
+  <footer class="footerPrincipal row">
+    
+    <div class="col-xs-12">
+      <ul class="ul-footer">
+        <li class="liFooter"><a class="aFooter" href="">Facebook</a></li>
+        <li class="liFooter"><a class="aFooter" href="">Instagram</a></li>
+        <li class="liFooter"><a class="aFooter" href="">Twitter</a></li>
+        <li class="liFooter"><a class="aFooter" href="">linkedIn</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
